@@ -3,4 +3,5 @@
   roles:
     - base
     - git
+    - postgres
   sudo : true

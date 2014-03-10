@@ -1,0 +1,12 @@
+---
+- name: Add PostgreSQL APT key
+  apt_key: url="http://keyserver.ubuntu.com/pks/lookup?op=get&fingerprint=on&search=0x7FCC7D46ACCC4CF8" state=present
+
+- name: Add PostgreSQL repository
+  apt_repository: repo='deb http://apt.postgresql.org/pub/repos/apt/ precise-pgdg main' state=present
+
+- name: Install PostgreSQL
+  apt: pkg=postgresql-9.3 state=present
+
+- name: Launch the service if not started
+  service: name=postgresql state=started
