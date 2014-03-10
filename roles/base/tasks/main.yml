@@ -1,0 +1,11 @@
+---
+- name: Full upgrade
+  apt: upgrade=full update_cache=yes
+
+- name: Install base packages
+  apt: pkg={{ item }} state=present
+  with_items:
+    - python-software-properties
+    - python-pycurl
+    - htop
+    - vim

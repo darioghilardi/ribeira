@@ -1,3 +1,5 @@
 ---
 - hosts: default
+  roles:
+    - base
   sudo : true
