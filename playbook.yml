@@ -2,4 +2,5 @@
 - hosts: default
   roles:
     - base
+    - git
   sudo : true
