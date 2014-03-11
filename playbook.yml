@@ -8,4 +8,5 @@
     - ruby
     - zsh
     - chruby
+    - bundler
   sudo : true
