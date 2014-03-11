@@ -7,4 +7,5 @@
     - ruby-install
     - ruby
     - zsh
+    - chruby
   sudo : true

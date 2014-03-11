@@ -1,0 +1,15 @@
+---
+- name: Download chruby
+  get_url: url="https://github.com/postmodern/chruby/archive/v0.3.8.tar.gz" dest="/tmp/chruby.tar.gz"
+
+- name: Extract chruby
+  command: tar -zxf /tmp/chruby.tar.gz creates=/home/vagrant/chruby
+
+- name: Install chruby
+  command: make install chdir=/home/vagrant/chruby-0.3.8
+
+- name: Add chruby to zshrc
+  lineinfile: dest=/home/vagrant/.zshrc line="source /usr/local/share/chruby/chruby.sh"
+
+- name: Enable installed ruby version
+  lineinfile: dest=/home/vagrant/.zshrc line="chruby 2.1.1"
