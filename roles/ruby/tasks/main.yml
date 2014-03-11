@@ -1,0 +1,3 @@
+---
+- name: Install ruby 2.1.1
+  command: ruby-install ruby 2.1.1
