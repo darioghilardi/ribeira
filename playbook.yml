@@ -1,5 +1,10 @@
 ---
 - hosts: default
   roles:
+    - base
+    - git
+    - postgres
+    - ruby-install
     - ruby
+    - zsh
   sudo : true
