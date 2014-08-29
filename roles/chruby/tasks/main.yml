@@ -12,4 +12,4 @@
   lineinfile: dest=/home/vagrant/.zshrc line="source /usr/local/share/chruby/chruby.sh"
 
 - name: Enable installed ruby version
-  lineinfile: dest=/home/vagrant/.zshrc line="chruby 2.1.1"
+  lineinfile: dest=/home/vagrant/.zshrc line="chruby ruby"
