@@ -1,6 +1,6 @@
 ---
-#- name: Add Git PPA
-#  apt_repository: repo='ppa:pdoes/ppa' state=present update_cache=true
+- name: Add Git PPA
+  apt_repository: repo='ppa:pdoes/ppa' state=present update_cache=true
 
 - name: Install latest Git
   apt: pkg=git state=present
