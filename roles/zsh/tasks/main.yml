@@ -11,8 +11,9 @@
     dest="/home/vagrant/.oh-my-zsh"
 
 - name: Creating a new .zshrc
-  shell: >
+  command: >
     cp /home/vagrant/.oh-my-zsh/templates/zshrc.zsh-template /home/vagrant/.zshrc
+    creates="/home/vagrant/.zshrc"
 
 - name: Set zsh as default shell
   user: >
