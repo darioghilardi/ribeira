@@ -1,5 +1,9 @@
 ---
 - hosts: default
+  vars:
+    postgresql_version: 9.3
+    ruby_install_version: HEAD
+    ruby_version: 2.1.2
   roles:
     - base
     - git
