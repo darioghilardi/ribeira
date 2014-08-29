@@ -1,9 +1,13 @@
 ---
-- name: Download ruby-install
-  get_url: url="https://github.com/postmodern/ruby-install/archive/v0.4.3.tar.gz" dest="/tmp/ruby-install.tar.gz"
-
-- name: Extract ruby-install
-  command: tar -zxf /tmp/ruby-install.tar.gz creates=/home/vagrant/ruby-install
+- name: Clone ruby-install
+  git: >
+    repo="https://github.com/postmodern/ruby-install"
+    dest="/home/vagrant/ruby-install"
+    version={{ruby_install_version}}
+    accept_hostkey=true
 
 - name: Install ruby-install
-  command: make install chdir=/home/vagrant/ruby-install-0.4.3
+  command: >
+    make install
+    chdir="/home/vagrant/ruby-install"
+    creates="/usr/local/bin/ruby-install"
