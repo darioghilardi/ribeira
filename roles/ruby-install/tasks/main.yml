@@ -2,12 +2,12 @@
 - name: Clone ruby-install
   git: >
     repo="https://github.com/postmodern/ruby-install"
-    dest="/home/vagrant/ruby-install"
+    dest="/home/{{user}}/ruby-install"
     version={{ruby_install_version}}
     accept_hostkey=true
 
 - name: Install ruby-install
   command: >
     make install
-    chdir="/home/vagrant/ruby-install"
+    chdir="/home/{{user}}/ruby-install"
     creates="/usr/local/bin/ruby-install"

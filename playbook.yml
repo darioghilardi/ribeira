@@ -1,6 +1,7 @@
 ---
 - hosts: default
   vars:
+    user: vagrant
     postgresql_version: 9.3
     ruby_install_version: HEAD
     chruby_version: 0.3.8

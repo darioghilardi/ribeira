@@ -7,19 +7,19 @@
 - name: Extract chruby
   command: >
     tar -zxf /tmp/chruby.tar.gz
-    creates="/home/vagrant/chruby"
+    creates="/home/{{user}}/chruby-{{chruby_version}}"
 
 - name: Install chruby
   command: >
     make install
-    chdir="/home/vagrant/chruby-{{chruby_version}}"
+    chdir="/home/{{user}}/chruby-{{chruby_version}}"
 
 - name: Add chruby to zshrc
   lineinfile: >
-    dest="/home/vagrant/.zshrc"
+    dest="/home/{{user}}/.zshrc"
     line="source /usr/local/share/chruby/chruby.sh"
 
 - name: Enable installed ruby version
   lineinfile:
-    dest="/home/vagrant/.zshrc"
+    dest="/home/{{user}}/.zshrc"
     line="chruby ruby"

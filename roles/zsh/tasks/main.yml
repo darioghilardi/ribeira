@@ -8,14 +8,14 @@
 - name: Clone oh-my-zsh repo
   git: >
     repo="https://github.com/robbyrussell/oh-my-zsh.git"
-    dest="/home/vagrant/.oh-my-zsh"
+    dest="/home/{{user}}/.oh-my-zsh"
 
 - name: Creating a new .zshrc
   command: >
-    cp /home/vagrant/.oh-my-zsh/templates/zshrc.zsh-template /home/vagrant/.zshrc
-    creates="/home/vagrant/.zshrc"
+    cp /home/{{user}}/.oh-my-zsh/templates/zshrc.zsh-template /home/{{user}}/.zshrc
+    creates="/home/{{user}}/.zshrc"
 
 - name: Set zsh as default shell
   user: >
-    name=vagrant
+    name={{user}}
     shell="/bin/zsh"
