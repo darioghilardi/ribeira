@@ -1,18 +1,15 @@
 ---
-- name: Download chruby
-  get_url: >
-    url="https://github.com/postmodern/chruby/archive/v{{chruby_version}}.tar.gz"
-    dest="/tmp/chruby.tar.gz"
-
-- name: Extract chruby
-  command: >
-    tar -zxf /tmp/chruby.tar.gz
-    creates="/home/{{user}}/chruby-{{chruby_version}}"
+- name: Clone chruby
+  git: >
+    repo="https://github.com/postmodern/chruby"
+    dest="/home/{{user}}/chruby"
+    version=v{{chruby_version}}
+    accept_hostkey=true
 
 - name: Install chruby
   command: >
     make install
-    chdir="/home/{{user}}/chruby-{{chruby_version}}"
+    chdir="/home/{{user}}/chruby"
 
 - name: Add chruby to zshrc
   lineinfile: >
