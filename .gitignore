@@ -2,3 +2,4 @@
 vagrant_ansible_inventory_default
 .DS_Store
 hosts
+playbook.yml

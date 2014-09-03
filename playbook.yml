@@ -1,15 +1,16 @@
 ---
 - hosts: default
   vars:
-    user: vagrant
+    user: user
     postgresql_version: 9.3
     ruby_install_version: HEAD
     chruby_version: 0.3.8
-    ruby_version: 2.1.2
+    ruby_version: 1.9.3-p547
   roles:
     - base
     - git
-    - postgres
+    - postgresql
+    - mysql
     - ruby-install
     - ruby
     - zsh
