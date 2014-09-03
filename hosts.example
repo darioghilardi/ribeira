@@ -1,0 +1,2 @@
+[default]
+machine_name ansible_ssh_port=22 ansible_ssh_host=hostname ansible_ssh_user=ssh_user ansible_sudo_pass=sudo_password
