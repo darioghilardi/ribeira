@@ -9,7 +9,7 @@
   roles:
     - base
     - git
-    - postgresql
+    - postgres
     - mysql
     - ruby-install
     - ruby
