@@ -4,3 +4,6 @@
 
 - name: Launch the service if not started
   service: name=mysql state=started
+
+- name: Install dependency for mysql gem building
+  apt: pkg=libmysqlclient-dev state=present
