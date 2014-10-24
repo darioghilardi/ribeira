@@ -10,3 +10,4 @@
     - python-pycurl
     - htop
     - vim
+    - nodejs # runtime for execjs
