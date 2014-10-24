@@ -10,3 +10,6 @@
 
 - name: Launch the service if not started
   service: name=postgresql state=started
+
+- name: Install dependency for pg gem building
+  apt: pkg=libpq-dev state=present
