@@ -15,6 +15,10 @@ Vagrant.configure '2' do |config|
     v.vmx['numvcpus'] = '8'
   end
 
+  config.vm.provider :parallels do |v, override|
+    override.vm.box = 'parallels/ubuntu-14.04'
+  end
+
   # Forward the port from the VM to the host machine for the app.
   config.vm.network :forwarded_port, guest: 3000, host: 3000
 
