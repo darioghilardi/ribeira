@@ -1,4 +1,4 @@
 ---
 - name: Install bundler using the current ruby version
-  shell: chruby-exec ruby -- gem install bundler
+  command: chruby-exec ruby -- gem install bundler
   sudo: no
