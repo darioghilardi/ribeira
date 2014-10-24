@@ -16,4 +16,5 @@
     - zsh
     - chruby
     - bundler
+    - imagemagick
   sudo : true
