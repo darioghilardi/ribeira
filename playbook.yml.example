@@ -17,4 +17,5 @@
     - chruby
     - bundler
     - imagemagick
+    - samba
   sudo : true
